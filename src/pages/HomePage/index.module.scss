@@ -1,0 +1,42 @@
+.wrapperWidth {
+    width: 75%;
+}
+.section1 {
+    display: flex;
+    .imageContainer {
+        width: 60%;
+        img {
+            width: 100%;
+        }
+    }
+    div {
+        flex: 1;
+        h3 {
+            font-size: 4rem;
+            font-weight: 500;
+            text-align: center;
+        }
+        p {
+            font-size: 1.4rem;
+            font-weight: 500;
+        }
+    }
+    .suggestion {
+        padding: 20rem 0;
+        h3 {
+            margin: 2rem 0;
+        }
+    }
+}
+.section2 {
+    h4 {
+        font-size: 3.5rem;
+        text-align: center;
+        margin: 3rem 0;
+    }
+    .developmentTools {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+        grid-gap: 2rem;
+    }
+}

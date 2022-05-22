@@ -1,0 +1,72 @@
+.header {
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+    .menu {
+        .nav {
+            .ul {
+                display: flex;
+                padding: 1rem;
+                justify-content: center;
+                li {
+                    list-style: none;
+                    padding: 1rem 2rem;
+                    a {
+                        text-decoration: none;
+                        text-transform: uppercase;
+                        font-size: 1.6rem;
+                        color: #222;
+                        position: relative;
+
+                        &::before {
+                            content: "";
+                            width: 0;
+                            height: 0.5rem;
+                            background-color: #00bcd4;
+                            position: absolute;
+                            border-radius: 0.8rem;
+                            top: 120%;
+                            left: 0;
+                            transition: all 0.5s;
+                        }
+                        &:hover:before {
+                            width: 48%;
+                            transform: translateX(105%);
+                        }
+                        &:after {
+                            content: "";
+                            width: 0;
+                            height: 0.5rem;
+                            background-color: #f0f;
+                            position: absolute;
+                            border-radius: 0.8rem;
+                            top: 120%;
+                            right: 0;
+                            transition: all 0.5s;
+                        }
+                        &:hover:after {
+                            width: 48%;
+                            transform: translateX(-105%);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.activeClassName {
+    &:after {
+        width: 48% !important;
+        transform: translateX(-105%) !important;
+    }
+    &:before {
+        width: 48% !important;
+        transform: translateX(105%) !important;
+    }
+}
+
+.logoContainer {
+    img {
+        width: 5rem;
+        height: 5rem;
+    }
+}
